@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="row">
+        <div class="col-md-12">
+   
+            <nav class="navbar navbar-expand-lg navbar-light bg-info">
+                <div class="container-fluid">
+                <a href="#" class="navbar-brand" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight:bolder; color:red;">PREMIER LEAGUE</a>
+                <button type="button" class="navbar-toggler"
+                data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between"
+                id="navbarCollapse">
+                <div class="navbar-nav">
+                <a href="/index" class="nav-item nav-link active" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight:bolder; color:red;">HOME</a>
+                <a href="/viewbookings" class="nav-item nav-link">MY BOOKINGS</a>
+               <a href="/hire.html" class="nav_item nav_link">Hire</a>
+                <a href="contact.html" class="nav-item nav-link">CONTACT</a>
+           
+                </div>
+                <form class="d-flex">
+               
+                <div class="input-group">
+                <input type="text"
+                class="form-control" placeholder="Search">
+                <button type="button"
+                class="btn btn-secondary">
+                <i class="bi-search"></i>
+                </button>
+                </div>
+                </form>
+                <div class="navbar-nav">
+                <a href="/signout" class="nav-item nav-link">Logout</a>
+                </div>
+                </div>
+                </div>
+                </nav>
+   
+   
+   
+   
+   
+   
+   
+   
+        </div>
+        </section>
+    <hr style="border: solid 4px red;">
+   <h2 class="text-center" style="font-family:'Times New Roman', Times, serif; font-weight:bolder; color:red;">CHECKOUT</h2>
+   <hr style="border: solid 4px red;"><br>
+   <section class="row container-fluid">
+       <div class="col-md-5">
+           <img src="{{row[3]}}" alt="">
+        </div>
+           <div class="col-md-3">
+            <h5 class="card-title">Make: {{row[1]}}</h5>
+            <p class="card-title">Color: {{row[2]}}</p>
+            <p class="card-text text-muted">{{row[4]}}</p>
+            <p class="card-text"> KSH: {{row[5]}}</p>
+            
+            
+           </div>
+<div class="col-md-4">
+    <form action="/mpesa" method="post">
+    <label for="Phone Number"></label>
+    <input type="text" name="phone"class=form-control-sm placeholder="2547xxxxx"><br><br>
+    <label for=""> Amount</label><br><br>
+    <input type="text" name="amount"class=form-control-sm placeholder="amount">
+    <br><br>
+    <input type="submit" class="btn btn-dark" value="CHECKOUT">
+</form>
+
+</div>
+
+     
+
+
+
+   </section>
+</body>
+</html>
